@@ -1,0 +1,213 @@
+/* Global styles for the body and page layout */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/background4.jpg'); /* Path to your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the entire page */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%; /* Ensure full width */
+}
+
+.signup-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px; /* Restrict the maximum width */
+  background-color: rgba(255, 255, 255, 0.8); /* Light white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.left-side {
+  width: 45%;
+  text-align: center;
+  padding: 10px;
+}
+
+.right-side {
+  width: 45%;
+  text-align: center;
+  padding: 10px;
+}
+
+.card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 90%; /* Keep fields well-contained */
+  max-width: 300px; /* Limit field size */
+  padding: 14px;
+  margin: 10px auto; /* Center horizontally with margin */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+}
+
+.input-field:focus {
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+.input-field::placeholder {
+  color: #aaa;
+}
+
+button {
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 90%; /* Match input field width */
+  max-width: 300px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px; /* Add spacing */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.switch-page {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.switch-page a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.switch-page a:hover {
+  text-decoration: underline;
+}
+
+.office-logo {
+  width: 80%;
+  max-width: 250px; /* Ensure the logo remains proportional */
+  margin-top: 20px;
+}
+
+/* Ensures that the background image is displayed without repeating */
+.signup-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/background4.jpg'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1; /* Position it behind all other elements */
+  filter: blur(2px); /* Optional: slight blur for effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column; /* Stack form and image vertically */
+    align-items: center;
+    padding: 15px;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 90%; /* Limit the width */
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .input-field,
+  button {
+    max-width: 100%; /* Adjust for narrow screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card h2 {
+    font-size: 20px;
+  }
+
+  .input-field {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .office-logo {
+    max-width: 200px; /* Adjust logo size for smaller screens */
+  }
+}
+/* General styling for dropdown to match input fields */
+select.input-field {
+  appearance: none; /* Hides default dropdown arrow */
+  background-color: #fff; /* Same as input fields */
+  cursor: pointer;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%234CAF50" viewBox="0 0 24 24"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E'); /* Add custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position arrow on the right */
+  background-size: 16px; /* Size of the arrow */
+  padding-right: 30px; /* Space for the arrow */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  width: 90%;
+  max-width: 300px; /* Same width as other input fields */
+}
+
+select.input-field:focus {
+  outline: none;
+  border-color: #4CAF50; /* Green border on focus */
+}
+
+select.input-field::placeholder {
+  color: #aaa;
+}
+
+/* Mobile adjustment for dropdown */
+@media (max-width: 480px) {
+  select.input-field {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+

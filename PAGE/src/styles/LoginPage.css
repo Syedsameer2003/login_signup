@@ -1,0 +1,99 @@
+/* General styling for the login page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("/images/your-background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1100px; /* Slightly adjusted max-width */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+  width: 45%;
+  text-align: center;
+}
+
+.card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 90%; /* Kept contained in the card */
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #4CAF50;
+}
+
+button {
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.switch-page,
+.forgot-password {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.switch-page a,
+.forgot-password a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.switch-page a:hover,
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.right-side {
+  width: 45%;
+  text-align: center;
+}
+
+.office-logo {
+  width: 80%;
+  max-width: 300px;
+  margin-top: 20px;
+}
